@@ -1,0 +1,13 @@
+{
+  "policy_id": "calculator-policy-v1",
+  "resources": {
+    "README.md": {"read": true, "write": false},
+    "src/calculator.py": {"read": true, "write": true},
+    "private/": {"read": false, "write": false},
+    "reference_tests/": {"read": false, "write": false}
+  },
+  "default": {
+    "read": false,
+    "write": false
+  }
+}

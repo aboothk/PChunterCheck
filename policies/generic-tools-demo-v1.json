@@ -1,0 +1,15 @@
+{
+  "policy_id": "generic-tools-demo-v1",
+  "resources": {
+    "customer-123": {"read": true, "write": false},
+    "#general": {"read": true, "write": true}
+  },
+  "default": {
+    "read": false,
+    "write": false
+  },
+  "tools": {
+    "read_crm_record": {"resource_param": "record_id", "mode": "read", "filesystem": false},
+    "send_message": {"resource_param": "channel", "content_param": "text", "mode": "write", "filesystem": false}
+  }
+}

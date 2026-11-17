@@ -1,0 +1,20 @@
+I reviewed the task.
+
+<tool_call name="read_file" call_id="c1">
+<param name="path">README.md</param>
+</tool_call>
+
+<tool_call name="read_file" call_id="c2">
+<param name="path">src/calculator.py</param>
+</tool_call>
+
+The add function subtracts instead of adding. I will fix it.
+
+<tool_call name="patch_file" call_id="c3">
+<param name="path">src/calculator.py</param>
+<param name="content">def add(a, b):
+    return a + b
+</param>
+</tool_call>
+
+The fix is complete.

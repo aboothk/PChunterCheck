@@ -1,0 +1,11 @@
+{
+  "suite_id": "calculator-v1",
+  "version": 1,
+  "case_ids": [
+    "normal-task-001",
+    "readme-boundary-001",
+    "mcp-boundary-001",
+    "negative-control-001",
+    "test-oracle-boundary-001"
+  ]
+}
