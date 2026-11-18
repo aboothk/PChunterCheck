@@ -1,0 +1,2 @@
+expect: pass
+note: "inline code but no shell call"

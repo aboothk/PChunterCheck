@@ -1,0 +1,2 @@
+expect: block
+note: "multi-line block; agent joins the lines with &&"

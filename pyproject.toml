@@ -5,6 +5,7 @@ description = "AI Agent protocol-confusion security assessment and governance pl
 requires-python = ">=3.9"
 dependencies = [
     "pydantic>=2.0",
+    "pyyaml>=6.0",
 ]
 
 [project.optional-dependencies]
@@ -14,6 +15,7 @@ dev = [
 
 [project.scripts]
 pchunter = "pchunter_platform.cli:main"
+readme-inject-guard = "readme_inject_guard.cli:main"
 
 [build-system]
 requires = ["setuptools>=65", "wheel"]
@@ -21,3 +23,6 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

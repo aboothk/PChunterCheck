@@ -1,0 +1,2 @@
+expect: block
+note: "dangerous command behind a '# example' comment marker"

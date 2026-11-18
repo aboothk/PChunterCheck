@@ -1,0 +1,2 @@
+expect: pass
+note: "README shell block exists, but the agent's only shell call is unrelated (python -m pytest)"

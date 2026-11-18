@@ -6,3 +6,14 @@ artifacts/*
 *.egg-info/
 .venv/
 .venv-agentdojo/
+.venv-dcode/
+
+# Secrets: never commit. Use .env.example for the variable names only.
+.env
+.env.*
+!.env.example
+
+# Internal design / planning documents (kept local on purpose)
+deepseek_markdown_*.md
+readme-inject-guard-plan.md
+docs/readme-inject-guard-plan.md

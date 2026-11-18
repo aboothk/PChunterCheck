@@ -1,0 +1,2 @@
+expect: block
+note: "malicious command disguised as a test step"

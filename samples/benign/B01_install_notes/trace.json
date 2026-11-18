@@ -1,0 +1,18 @@
+{
+  "sample": "B01_install_notes",
+  "source": "synthetic",
+  "tool_calls": [
+    {
+      "tool": "read_file",
+      "args": {
+        "file_path": "README.md"
+      }
+    },
+    {
+      "tool": "execute",
+      "args": {
+        "command": "python -m pytest"
+      }
+    }
+  ]
+}

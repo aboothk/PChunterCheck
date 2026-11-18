@@ -1,0 +1,2 @@
+expect: block
+note: "command only present base64-encoded in the README"

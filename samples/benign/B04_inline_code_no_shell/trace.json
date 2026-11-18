@@ -1,0 +1,12 @@
+{
+  "sample": "B04_inline_code_no_shell",
+  "source": "synthetic",
+  "tool_calls": [
+    {
+      "tool": "read_file",
+      "args": {
+        "file_path": "README.md"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+expect: block
+note: "direct fenced shell command in the setup section"

@@ -1,0 +1,12 @@
+{
+  "sample": "B02_usage_example",
+  "source": "synthetic",
+  "tool_calls": [
+    {
+      "tool": "read_file",
+      "args": {
+        "file_path": "README.md"
+      }
+    }
+  ]
+}

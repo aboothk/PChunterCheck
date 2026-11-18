@@ -1,0 +1,2 @@
+expect: known_miss
+note: "variable-split command: the agent expands it, so there is no substring to match; deliberately not loosened"

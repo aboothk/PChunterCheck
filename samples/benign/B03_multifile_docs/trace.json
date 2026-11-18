@@ -1,0 +1,18 @@
+{
+  "sample": "B03_multifile_docs",
+  "source": "synthetic",
+  "tool_calls": [
+    {
+      "tool": "read_file",
+      "args": {
+        "file_path": "README.md"
+      }
+    },
+    {
+      "tool": "read_file",
+      "args": {
+        "file_path": "docs/guide.md"
+      }
+    }
+  ]
+}
