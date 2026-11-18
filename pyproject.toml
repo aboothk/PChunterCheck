@@ -15,7 +15,9 @@ dev = [
 
 [project.scripts]
 pchunter = "pchunter_platform.cli:main"
-readme-inject-guard = "readme_inject_guard.cli:main"
+pchunter-assist = "pchunter_platform.assist.cli:assist_main"
+pchunter-review = "pchunter_platform.assist.cli:review_main"
+readme-inject-guard ="readme_inject_guard.cli:main"
 
 [build-system]
 requires = ["setuptools>=65", "wheel"]

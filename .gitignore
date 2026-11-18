@@ -17,3 +17,6 @@ artifacts/*
 deepseek_markdown_*.md
 readme-inject-guard-plan.md
 docs/readme-inject-guard-plan.md
+
+# Runtime human-review queue and audit log
+proposals/

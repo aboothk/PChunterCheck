@@ -194,6 +194,34 @@ The self-check exists because writing the replay found four real bugs in
 my own harness before the numbers were trustworthy. Read the "Four
 harness bugs" section of that document before quoting any result.
 
+## Assistant interface with human-in-the-loop
+
+An agent may help summarise evidence, propose regression cases and draft risk
+tickets, but cannot decide anything. Two planes, two entry points:
+
+```bash
+pchunter-assist evidence <run_id> <attempt_id>     # agent: read evidence (marked untrusted)
+pchunter-assist submit draft.json                  # agent: drafts land in proposals/pending/
+pchunter-review list                               # human
+pchunter-review approve <id> --reviewer alice --expectations exp.json
+pchunter-review reject  <id> --reviewer alice --reason "..."
+pchunter-review verify-audit
+```
+
+* Draft schemas are `extra=forbid` and have no field for expectations, oracle, policy,
+  finding status or gate verdict. A regression-case draft carries none; the reviewer
+  supplies `expected_properties` / `out_of_scope_paths` when approving.
+* Every cited `event_id` must exist in recorded evidence; evidence is control-char
+  stripped, truncated and labelled untrusted so injected text is data, not instructions.
+* Approval binds to the draft hash, refuses assistant-like reviewer names, never
+  overwrites an existing case, and appends to a hash-chained audit log.
+* `workflow.gate.compute_gate` takes only platform-recorded attempts/findings and never
+  reads proposals. Approving a case does not edit suites, policies or finding status.
+
+Limit: this is process separation, not an OS sandbox; a process with write access to
+`proposals/` could forge files (hash and audit checks detect tampering, not the reviewer
+name being typed by an agent).
+
 ## readme-inject-guard: README -> shell injection gate
 
 A second, independent tool in this repo. It asks one question of a real coding
